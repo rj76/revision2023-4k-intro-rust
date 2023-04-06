@@ -4,4 +4,11 @@
 
 ## requirements
 
-`apt install llvm-dev libclang-dev clang libgl-dev`
+`apt install llvm-dev libclang-dev clang libgl-dev nasm`
+
+## build
+
+* `$ git clone https://gitlab.com/PoroCYon/vondehi.git`
+* `$ rustup target add x86_64-unknown-linux-gnu --toolchain nightly-x86_64-unknown-linux-gnu`
+* `$ rustup component add rust-src --toolchain nightly`
+
