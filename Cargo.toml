@@ -1,0 +1,26 @@
+[package]
+name = "revision2023-4k-intro-rust"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#libc-print = "0.1.21"
+libc = {version = "0.2.*", default-features = false}
+#libc = {version = "0.2.*"}
+
+[build-dependencies]
+bindgen = "0.64.0"
+pkg-config = "0.3"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+strip = true
+panic = "abort"
+opt-level = 2
+lto = true
+codegen-units = 1
